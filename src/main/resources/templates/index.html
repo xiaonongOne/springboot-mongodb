@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        function query(){
+            window.location.href="/index";
+        }
+
+        function save(){
+            window.location.href="/add";
+        }
+    </script>
+    <style type="text/css">
+
+        .button{
+            width:500px;
+            margin: auto;
+        }
+        .btnDiv{
+            width:100%;
+
+        }
+    </style>
+
+</head>
+<body>
+<form name="Family Accent" method="post" action="">
+    <div align="center">MongoDB测试之用户列表</div>
+    <div align="right" class="button">
+        <input type="button" onclick="save()"  href="add.html"value="添加">
+        <input type="button" onclick="query()" name="submit6" value="查询">
+    </div>
+
+    <table width="500" border="2" align="center" >
+        <tr bgcolor="#cccccc" border=1 bordercolor=black>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>邮箱</th>
+            <th>昵称</th>
+            <th>年龄</th>
+            <th colspan="2">操作</th>
+        </tr>
+        <ul th:each = "user : ${userList}">
+            <tr align=center border=1 bordercolor=black>
+                <td th:text="${user.userName}"></td>
+                <td th:text="${user.passWord}"></td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.nickName}"></td>
+                <td th:text="${user.age}"></td>
+                <!--th:onclick="'javascript:update(\''+${user.age}+'\');'" -->
+                <td> <a href="#" th:href="@{/update(id=${user.id})}">编辑</a></td>
+                <td> <a href="#" th:href="@{/delById(id=${user.id})}">删除</a></td>
+            </tr>
+        </ul>
+
+    </table>
+</form>
+</body>
+</html>

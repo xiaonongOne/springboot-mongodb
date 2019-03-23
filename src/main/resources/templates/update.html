@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<form name="familyAccent" method="post" action="/userMongo/update">
+    <table width="500" border="0" align="center" cellpadding="0"cellspacing="2">
+        <tr>
+            <td width="243" height="25">编辑信息</td>
+        </tr>
+        <tr>
+            <td width="351">
+                <input type="hidden" name="id" id="id" th:value="${user.id}">
+            </td>
+        </tr>
+        <tr>
+            <td height="25">用户名：</td>
+            <td width="351">
+                <input type="text" name="userName" id="userName" th:value="${user.userName}">
+            </td>
+        </tr>
+        <tr>
+            <td height="25">密码：</td>
+            <td >
+                <input type="text" name="passWord" id="passWord" th:value="${user.passWord}">
+            </td>
+        </tr>
+        <tr>
+            <td height="25">邮箱：</td>
+            <td >
+                <input type="text" name="email" id="email" th:value="${user.email}">
+            </td>
+        </tr>
+        <tr>
+            <td height="25">年龄：</td>
+            <td >
+                <input type="text" name="age" id="age" th:value="${user.age}">
+            </td>
+        </tr>
+        <tr>
+            <td height="25">昵称：</td>
+            <td>
+                <input type="text" name="nickName" id="nickName" th:value="${user.nickName}">
+            </td>
+        </tr>
+        <tr>
+            <td height="25" align="center">
+                <input type="submit" name="submit5" id="sub" value="更新">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

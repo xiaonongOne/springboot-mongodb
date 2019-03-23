@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<form name="form" method="post" action="/userMongo/save">
+    <table width="500" border="0" align="center" cellpadding="0"cellspacing="2">
+        <tr>
+            <td width="243" height="25">编辑信息</td>
+        </tr>
+        <tr>
+            <td height="25">用户名：</td>
+            <td width="351">
+                <input type="text" name="userName" id="userName" required = "required">
+            </td>
+        </tr>
+
+        <tr>
+            <td height="25">密码：</td>
+            <td width="351">
+                <input type="text" name="passWord" id="passWord" required = "required">
+            </td>
+        </tr>
+
+        <tr>
+            <td height="25">邮箱：</td>
+            <td >
+                <input type="text" name="email" id="email" required = "required">
+            </td>
+        </tr>
+        <tr>
+            <td height="25">年龄：</td>
+            <td >
+                <input type="number" name="age" onblur="agemethod(age)" id="age" required = "required">
+            </td>
+        </tr>
+        <tr>
+            <td height="25">昵称：</td>
+            <td>
+                <textarea rows="3" cols="10" name="nickName" id="nickName"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td height="25" align="center">
+                <input type="submit" name="submit5" id="sub" value="更新">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
